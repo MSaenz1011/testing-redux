@@ -8,7 +8,7 @@ const InputNumber = () => {
   return(
     <input
       type='number'
-      onChange={ (event) => dispatch({ type:  CHANGE_NUMBER, payload: event.target.value})}
+      onChange={ (event) => dispatch({ type:  CHANGE_NUMBER, payload: parseInt(event.target.value)})}
       value={numberStore}
     />
   )

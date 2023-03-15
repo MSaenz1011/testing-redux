@@ -15,22 +15,22 @@ const reducer = (state = inicialState, action) => {
     case INCREMENT:
       return {
         ...state,
-        count: state.count + 2
+        count: state.count + state.number
       };
     case DECREMENT:
       return {
         ...state,
-        count: state.count - 2,
+        count: state.count - state.number,
       };
     case MULTIPLIER:
       return {
         ...state,
-        count: state.count * 2,
+        count: state.count * state.number,
       };
     case DIVIDER:
       return {
         ...state,
-        count: state.count / 2,
+        count: state.count / state.number,
       };
     case CHANGE_NUMBER:
       return {
