@@ -3,9 +3,11 @@ export const INCREMENT = "INCREMENT";
 export const DECREMENT = "DECREMENT";
 export const MULTIPLIER = "MULTIPLIER";
 export const DIVIDER = "DIVIDER";
+export const CHANGE_NUMBER = "CHANGE_NUMBER";
 
 const inicialState = {
   count: 0,
+  number:0
 };
 // (estado, accion)
 const reducer = (state = inicialState, action) => {
@@ -13,7 +15,7 @@ const reducer = (state = inicialState, action) => {
     case INCREMENT:
       return {
         ...state,
-        count: state.count + 2,
+        count: state.count + 2
       };
     case DECREMENT:
       return {
@@ -30,6 +32,11 @@ const reducer = (state = inicialState, action) => {
         ...state,
         count: state.count / 2,
       };
+    case CHANGE_NUMBER:
+      return {
+        ...state,
+        number: action.payload
+      }
 
     default:
       return state;

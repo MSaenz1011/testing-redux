@@ -1,10 +1,10 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch} from "react-redux";
 
 const Button = ({ typeAction, children }) => {
   const dispatch = useDispatch();
 
-  return (
+   return (
     <div>
       <button type="button" onClick={() => dispatch({ type: typeAction })}>
         {children}
