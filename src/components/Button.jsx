@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import "./style.css";
 
 const Button = ({ typeAction, children }) => {
   const dispatch = useDispatch();
